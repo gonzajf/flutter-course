@@ -9,25 +9,19 @@ class LocationDetail extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.red,
-              ),
-              child: Text("One"),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.green,
-              ),
-              child: Text("Two"),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text("Three"),
-            ),
+            section("One", Colors.red),
+            section("Two", Colors.green),
+            section("Three", Colors.blue),
           ],
         ));
+  }
+
+  Widget section(String title, Color color) {
+    return Container(
+      decoration: BoxDecoration(
+        color: color,
+      ),
+      child: Text(title),
+    );
   }
 }
