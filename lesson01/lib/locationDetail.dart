@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lesson01/styles.dart';
 import 'models/location.dart';
 
 class LocationDetail extends StatelessWidget {
@@ -36,9 +37,8 @@ class LocationDetail extends StatelessWidget {
   Widget _sectionTitle(String text) {
     return Container(
         padding: EdgeInsets.fromLTRB(25.0, 25.0, 25.0, 10.0),
-        child: Text(text,
-            textAlign: TextAlign.left,
-            style: TextStyle(fontSize: 25.0, color: Colors.black)));
+        child:
+            Text(text, textAlign: TextAlign.left, style: Styles.headerLarge));
   }
 
   Widget _sectionText(String text) {
