@@ -31,7 +31,7 @@ class Auth {
     }
   }
 
-  Future<String> siginIn({String email, String password}) async {
+  Future<String> signIn({String email, String password}) async {
     try {
       await auth.signInWithEmailAndPassword(
           email: email.trim(), password: password.trim());
