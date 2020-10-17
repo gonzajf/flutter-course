@@ -32,8 +32,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  firebase_core:
-  firebase_auth: 
+  firebase_core: "^0.5.0+1"
+  firebase_auth: "^0.18.1+2"
   cloud_firestore:
   lint:
 
