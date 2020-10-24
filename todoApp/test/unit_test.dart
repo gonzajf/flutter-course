@@ -44,4 +44,23 @@ void main() {
         await auth.createAccount(email: "gonza@mail.com", password: "123456"),
         "Exception");
   });
+
+  test("sign in", () async {
+    when(mockFirebaseAuth.signInWithEmailAndPassword(
+            email: "gonza@mail.com", password: "123456"))
+        .thenAnswer((realInvocation) => null);
+
+    expect(await auth.signIn(email: "gonza@mail.com", password: "123456"),
+        "Success");
+  });
+
+  test("sign in exception", () async {
+    when(mockFirebaseAuth.signInWithEmailAndPassword(
+            email: "gonza@mail.com", password: "123456"))
+        .thenAnswer((realInvocation) =>
+            throw FirebaseAuthException(message: "Exception"));
+
+    expect(await auth.signIn(email: "gonza@mail.com", password: "123456"),
+        "Exception");
+  });
 }
